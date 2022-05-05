@@ -1,0 +1,30 @@
+.wrap {
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.item {
+  transform: translateX(130%);
+  margin-bottom: 10px;
+
+  &.active {
+    transform: translateX(0);
+  }
+  &:nth-child(1) {
+    transition: transform 0.4s ease-in-out;
+  }
+  &:nth-child(2) {
+    transition: transform 0.5s ease-in-out;
+  }
+  &:nth-child(3) {
+    transition: transform 0.6s ease-in-out;
+  }
+  &:nth-child(4) {
+    transition: transform 0.7s ease-in-out;
+  }
+}
