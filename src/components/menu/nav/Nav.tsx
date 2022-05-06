@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import style from "./Nav.module.scss";
 
 type NavPropsType = {
@@ -10,9 +11,9 @@ export const Nav = ({ active }: NavPropsType) => {
     <nav className={active ? `${style.active} ${style.wrap}` : style.wrap}>
       <ul className={style.list}>
         <li className={active ? `${style.active} ${style.item}` : style.item}>
-          <a className={style.link} href="#">
+          <NavLink className={style.link} to="/Home">
             Home
-          </a>
+          </NavLink>
         </li>
         <li className={active ? `${style.active} ${style.item}` : style.item}>
           <a className={style.link} href="#">
