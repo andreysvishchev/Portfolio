@@ -4,9 +4,12 @@ import { Burger } from "./burger/Burger";
 import style from "./Menu.module.scss";
 import { Nav } from "./nav/Nav";
 
-export const Menu = () => {
-  const [active, setActive] = useState(false);
+type MenuPropsType = {
+  active: boolean;
+  setActive: (active: boolean) => void;
+};
 
+export const Menu = ({ active, setActive }: MenuPropsType) => {
   const toggleClass = () => {
     setActive(!active);
   };

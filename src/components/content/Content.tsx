@@ -1,9 +1,13 @@
 import React from "react";
 import style from "./Content.module.scss";
 
-export const Content = () => {
+type ContentPropsType = {
+  active: boolean;
+};
+
+export const Content = ({ active }: ContentPropsType) => {
   return (
-    <div className={style.wrap}>
+    <div className={active ? `${style.wrap} ${style.active}` : style.wrap}>
       Content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ea non, nostrum dolorem ad hic debitis cumque aut unde sunt! Maiores ut
       itaque, incidunt sequi distinctio dolores perspiciatis ipsa fugit voluptates accusamus consequatur fugiat saepe dolorem numquam provident illo
       odit eum minima eveniet. Aperiam, doloremque! Eos non fugit, rerum quod provident totam rem? Voluptates tempora amet ducimus recusandae nostrum
