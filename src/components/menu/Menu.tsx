@@ -17,7 +17,9 @@ export const Menu = ({ active, setActive }: MenuPropsType) => {
   return (
     <div className={active ? `${style.wrap} ${style.active}` : style.wrap}>
       <div className={style.block}>
-        <button onClick={toggleClass}>burger</button>
+        <button onClick={toggleClass} className={style.burger}>
+          burger
+        </button>
       </div>
 
       <h2 className={active ? `${style.title} ${style.active}` : style.title}>Menu</h2>

@@ -12,9 +12,11 @@ function App() {
 
   return (
     <div className={style.main}>
-      <Profile />
-      <Content active={active} />
-      <Menu active={active} setActive={setActive} />
+      <div className={style.container}>
+        <Profile />
+        <Content active={active} />
+        <Menu active={active} setActive={setActive} />
+      </div>
     </div>
   );
 }
